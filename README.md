@@ -1,3 +1,5 @@
+![Build Status](https://github.com/deniskore/py-ml-to-rs/actions/workflows/rust.yml/badge.svg)
+
 # Intro
 A friend of mine asked me to demonstrate how to load a model trained in Python into a Rust service. In response, this repository showcases the entire process of training a machine learning model to distinguish between various text encodings, achieving around 98.5% validation accuracy, using data sourced from the English Wiktionary.
 Subsequently, the trained model is seamlessly integrated into a Rust-based microservice, utilizing the ntex-rs. This implementation is streamlined with minimal dependencies, ensuring a lightweight and efficient service.
