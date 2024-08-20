@@ -11,8 +11,12 @@ mod model;
 #[ntex::main]
 async fn main() -> std::io::Result<()> {
     let model = Arc::new(
-        model::load_model("../../model/detector".to_string(), "predict_input", "predict_output")
-            .map_err(|err| std::io::Error::new(std::io::ErrorKind::Other, err))?,
+        model::load_model(
+            "../../model/detector".to_string(),
+            "predict_input",
+            "predict_output",
+        )
+        .map_err(|err| std::io::Error::new(std::io::ErrorKind::Other, err))?,
     );
 
     web::server(move || {
